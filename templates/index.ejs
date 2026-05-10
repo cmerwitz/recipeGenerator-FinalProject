@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Roulette</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <a href="/">Recipe Roulette</a>
+    <a href="/saved">My Saved Recipes</a>
+  </nav>
+
+  <main class="home">
+    <h1>What's for dinner?</h1>
+    <p class="subtitle">Spin the wheel and let fate decide your next meal.</p>
+
+    <form action="/spin" method="GET">
+      <label for="category">Filter by category (optional)</label>
+      <select name="category" id="category">
+        <option value="">— Surprise me —</option>
+        <option value="Beef">Beef</option>
+        <option value="Chicken">Chicken</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Pasta">Pasta</option>
+        <option value="Seafood">Seafood</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Vegan">Vegan</option>
+      </select>
+
+      <button type="submit" class="spin-btn">Spin</button>
+    </form>
+  </main>
+
+</body>
+</html>

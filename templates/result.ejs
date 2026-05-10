@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= meal.strMeal %> — Recipe Roulette</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <a href="/">Recipe Roulette</a>
+    <a href="/saved">My Saved Recipes</a>
+  </nav>
+
+  <main class="result">
+
+    <div class="recipe-header">
+      <img src="<%= meal.strMealThumb %>" alt="<%= meal.strMeal %>">
+      <div class="recipe-meta">
+        <h1><%= meal.strMeal %></h1>
+        <p class="category"><%= meal.strCategory %> · <%= meal.strArea %> cuisine</p>
+
+        <form action="/saved/add" method="POST">
+          <input type="hidden" name="mealId" value="<%= meal.idMeal %>">
+          <input type="hidden" name="title" value="<%= meal.strMeal %>">
+          <input type="hidden" name="image" value="<%= meal.strMealThumb %>">
+          <input type="hidden" name="category" value="<%= meal.strCategory %>">
+          <button type="submit" class="save-btn">Save this recipe</button>
+        </form>
+
+        <a href="/spin?category=<%= meal.strCategory %>" class="spin-again">Spin again</a>
+      </div>
+    </div>
+
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <% for (let i = 1; i <= 20; i++) { %>
+          <% if (meal['strIngredient' + i]) { %>
+            <li>
+              <%= meal['strMeasure' + i] %> <%= meal['strIngredient' + i] %>
+            </li>
+          <% } %>
+        <% } %>
+      </ul>
+    </section>
+
+    <section class="instructions">
+      <h2>Instructions</h2>
+      <p><%= meal.strInstructions %></p>
+    </section>
+
+  </main>
+
+</body>
+</html>

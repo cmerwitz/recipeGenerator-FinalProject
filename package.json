@@ -1,0 +1,20 @@
+{
+  "name": "cmerwitzfinalproject",
+  "version": "1.0.0",
+  "description": "Submitted by: Carly Merwitz (cmerwitz) Group Members: Carly Merwitz (cmerwitz) App Description: Allow users to find images, songs of an author, and store/retrieve the results. YouTube Video Link: https://www.youtube.com/MyAmazingAPP APIs: VideoApp (http:notrealvideoapp.what), SoundApp (http:notreadlsoundapp.what) Contact Email:  superterp@notreal.address.what Deployed App Link: https://notreal.what.terpNel/myApp AI Use: 1. Claude Code, 2. ChatGPT",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.2",
+    "node-fetch": "^2.7.0"
+  }
+}

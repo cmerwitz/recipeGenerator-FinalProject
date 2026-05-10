@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Recipes — Recipe Roulette</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <a href="/">Recipe Roulette</a>
+    <a href="/saved">My Saved Recipes</a>
+  </nav>
+
+  <main class="saved">
+    <h1>Saved Recipes</h1>
+
+    <% if (recipes.length === 0) { %>
+      <p class="empty">No saved recipes yet. <a href="/">Spin to find one!</a></p>
+    <% } else { %>
+      <div class="recipe-grid">
+        <% recipes.forEach(recipe => { %>
+          <div class="recipe-card">
+            <img src="<%= recipe.image %>" alt="<%= recipe.title %>">
+            <div class="card-body">
+              <h2><%= recipe.title %></h2>
+              <p class="category"><%= recipe.category %></p>
+
+              <form action="/saved/delete/<%= recipe._id %>" method="POST">
+                <button type="submit" class="delete-btn">Remove</button>
+              </form>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+
+  </main>
+
+</body>
+</html>

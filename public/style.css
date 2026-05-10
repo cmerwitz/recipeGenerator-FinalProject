@@ -1,0 +1,251 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background-color: #fdf6ee;
+  color: #2c2c2c;
+}
+
+/* Nav */
+nav {
+  background-color: #c0392b;
+  padding: 16px 32px;
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+/* Home page */
+.home {
+  text-align: center;
+}
+
+.home h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+}
+
+.home .subtitle {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 36px;
+}
+
+.home form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.home label {
+  font-size: 14px;
+  color: #444444;
+}
+
+.home select {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  padding: 10px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #2c2c2c;
+  width: 280px;
+}
+
+/* Buttons */
+.spin-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #c0392b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 48px;
+  cursor: pointer;
+}
+
+.spin-btn:hover {
+  background-color: #a93226;
+}
+
+.save-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.save-btn:hover {
+  background-color: #444444;
+}
+
+.delete-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.delete-btn:hover {
+  background-color: #fdf0ee;
+}
+
+.spin-again {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #c0392b;
+}
+
+/* Result page */
+.recipe-header {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.recipe-header img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.recipe-meta h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.recipe-meta .category {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 16px;
+}
+
+/* Ingredients */
+.ingredients {
+  margin-bottom: 36px;
+}
+
+.ingredients h2,
+.instructions h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #2c2c2c;
+}
+
+.ingredients ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.ingredients ul li {
+  font-size: 15px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+/* Instructions */
+.instructions p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333333;
+  white-space: pre-line;
+}
+
+/* Saved page */
+.saved h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.empty {
+  font-size: 16px;
+  color: #888888;
+}
+
+.empty a {
+  color: #c0392b;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.recipe-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.card-body .category {
+  font-size: 13px;
+  color: #888888;
+}
